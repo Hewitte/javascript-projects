@@ -1,5 +1,3 @@
-console.log('hi');
-
 const getUserChoice = (userInput)=>{
   userInput = userInput.toLowerCase();
 
@@ -11,3 +9,20 @@ const getUserChoice = (userInput)=>{
   }
 }
 
+const getComputerChoice = ()=>{
+  const compSelection = Math.floor(Math.random() * 3);
+
+
+  if(compSelection === 0){
+    return 'rock';
+  }
+
+  if(compSelection === 1){
+    return 'scissor';
+  }
+
+  if(compSelection === 2){
+    return 'paper';
+  }
+
+}
