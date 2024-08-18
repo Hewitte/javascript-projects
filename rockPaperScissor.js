@@ -29,38 +29,49 @@ const getComputerChoice = ()=>{
 
 const winnerSelection=(userChoice, compChoice) =>{
   if (userChoice===compChoice){
-    return "You have tied!"
+    return console.log("You have tied!")
   }
 
   if(userChoice === "rock"){
 
     if(compChoice==="paper"){
-      return "You have lost!"
+      return console.log("You have lost!")
     }
     else{
-      return "You have won!"
+      return console.log("You have won!")
     }
   }
 
   if(userChoice==="paper"){
-    if(compChoice==="scissors"){
-      return "You have lost!"
+    if(compChoice==="scissor"){
+      return console.log("You have lost!")
     }
     else{
-      return "You have won!"
+      return console.log("You have won!")
     }
 
   }
 
-  if(userChoice==="scissors"){
+  if(userChoice==="scissor"){
     if(compChoice==="rock"){
-      return "You have lost!"
+      return console.log("You have lost!")
     }
     else{
-      return "You have won!"
+      return console.log("You have won!")
     }
 
   }
 }
 
+const gameLoop=()=>{
+    let userChoice = getComputerChoice()
+    console.log("You selected " + userChoice)
+    let compChoice = getComputerChoice()
+    console.log("The computer has selected " + compChoice)
 
+    winnerSelection(userChoice,compChoice)
+
+}
+
+
+gameLoop();
