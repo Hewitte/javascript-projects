@@ -26,3 +26,41 @@ const getComputerChoice = ()=>{
   }
 
 }
+
+const winnerSelection=(userChoice, compChoice) =>{
+  if (userChoice===compChoice){
+    return "You have tied!"
+  }
+
+  if(userChoice === "rock"){
+
+    if(compChoice==="paper"){
+      return "You have lost!"
+    }
+    else{
+      return "You have won!"
+    }
+  }
+
+  if(userChoice==="paper"){
+    if(compChoice==="scissors"){
+      return "You have lost!"
+    }
+    else{
+      return "You have won!"
+    }
+
+  }
+
+  if(userChoice==="scissors"){
+    if(compChoice==="rock"){
+      return "You have lost!"
+    }
+    else{
+      return "You have won!"
+    }
+
+  }
+}
+
+
